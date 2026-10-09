@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tracewell — From collected data to decisions you can defend</title>
+<meta name="description" content="Tracewell helps NGOs and research teams turn survey, interview and programme data into reliable, traceable evidence and donor-ready reports. Based in Nairobi, Kenya.">
+<meta property="og:title" content="Tracewell — research & impact intelligence">
+<meta property="og:description" content="From collected data to decisions you can defend.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tracewell.co.ke/">
+<link rel="canonical" href="https://tracewell.co.ke/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230F6E56'/%3E%3Cpath d='M8 21l5-6 4 3 7-9' stroke='white' stroke-width='2.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FBFAF7; --alt:#F3F1EA; --card:#FFFFFF; --ink:#1E2A2F; --muted:#5D686C;
+  --line:#E6E3DA; --brand:#0F6E56; --brand-dark:#085041; --tint:#E1F5EE; --chip:#F1EFE8;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:500;line-height:1.15;margin:0 0 .5em}
+h1{font-size:clamp(2.3rem,5.4vw,3.8rem);max-width:15ch}
+h2{font-size:clamp(1.7rem,3.4vw,2.4rem);max-width:24ch}
+h3{font-size:1.18rem}
+p{margin:0 0 1em}
+a{color:var(--brand)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+section{padding:92px 0;scroll-margin-top:64px}
+.alt{background:var(--alt)}
+.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.76rem;font-weight:600;color:var(--brand);margin-bottom:14px}
+.muted{color:var(--muted)}
+.lead{font-size:1.15rem;color:#4A5559;max-width:52ch}
+.btn{display:inline-block;padding:12px 22px;border-radius:10px;font-weight:500;text-decoration:none;border:1px solid transparent;cursor:pointer;font:inherit;font-size:1rem}
+.btn-primary{background:var(--brand);color:#fff}
+.btn-primary:hover{background:var(--brand-dark)}
+.btn-ghost{border-color:#C9C5BA;color:var(--ink)}
+.btn-ghost:hover{border-color:var(--ink)}
+.btn-sm{padding:8px 16px;font-size:.92rem}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:20;background:rgba(251,250,247,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-family:Fraunces,serif;font-weight:600;font-size:1.35rem;color:var(--ink);text-decoration:none}
+.brand svg{width:28px;height:28px}
+.links a{margin-left:24px;color:#3D4A4F;text-decoration:none;font-size:.95rem}
+.links a:hover{color:var(--brand)}
+.links a.btn{color:#fff;margin-left:24px}
+
+/* hero */
+.hero{padding-top:84px}
+.grid2{display:grid;grid-template-columns:7fr 5fr;gap:56px;align-items:center}
+.cta{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px}
+.path{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px}
+.step{padding:11px 15px;border-radius:9px;background:var(--chip);margin-bottom:8px;font-size:.95rem}
+.step.mid{background:var(--tint);color:var(--brand-dark)}
+.step.out{background:var(--brand);color:#fff;margin-bottom:0}
+.arrow{text-align:center;color:#9C9A92;font-size:.9rem;margin:2px 0 8px}
+
+/* tiles */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:36px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px;height:100%}
+.num{font-family:Fraunces,serif;color:var(--brand);font-size:1.5rem;margin-bottom:6px}
+.tile p:last-child{margin-bottom:0}
+.price{font-family:Fraunces,serif;font-size:1.65rem;margin:4px 0 2px}
+.unit{font-size:.88rem;color:var(--muted);margin-bottom:14px}
+.featured{border:2px solid var(--brand);position:relative}
+.badge{position:absolute;top:-12px;left:22px;background:var(--brand);color:#fff;font-size:.74rem;font-weight:600;padding:3px 10px;border-radius:20px}
+
+/* demo teaser */
+.demo{display:grid;grid-template-columns:5fr 6fr;gap:48px;align-items:center}
+.checks{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:8px 0;font-size:.94rem}
+.checks div{display:flex;justify-content:space-between;padding:11px 22px;border-bottom:1px solid var(--line)}
+.checks div:last-child{border-bottom:0}
+.checks b{font-weight:600;color:#993C1D;font-variant-numeric:tabular-nums}
+.checks .ok b{color:var(--brand)}
+.note{font-size:.86rem;color:var(--muted);margin-top:12px}
+
+/* data handling */
+.trust{margin-top:40px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:30px;max-width:780px}
+.trust ul{margin:0;padding-left:20px;color:var(--muted)}
+.trust li{margin-bottom:6px}
+
+/* form */
+.form{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:30px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:block;font-size:.88rem;font-weight:500;margin-bottom:6px}
+input,select,textarea{width:100%;padding:11px 13px;border:1px solid #D3D0C6;border-radius:9px;font:inherit;font-size:.97rem;background:#fff;color:var(--ink);margin-bottom:16px}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--tint);border-color:var(--brand)}
+.hp{position:absolute;left:-9999px}
+#status{margin-top:14px;font-size:.95rem}
+#status.ok{color:var(--brand)} #status.err{color:#A32D2D}
+
+footer{border-top:1px solid var(--line);padding:30px 0;font-size:.88rem;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+
+@media (max-width:900px){
+  .grid2,.demo{grid-template-columns:1fr;gap:36px}
+  .grid3{grid-template-columns:1fr}
+  .grid4{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  section{padding:64px 0}
+  .links a:not(.btn){display:none}
+  .grid4,.row2{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Tracewell home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0F6E56"/><path d="M8 21l5-6 4 3 7-9" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Tracewell
+    </a>
+    <nav class="links">
+      <a href="#approach">Approach</a>
+      <a href="#demo">Live demo</a>
+      <a href="#offers">Offers</a>
+      <a href="#teams">Who it's for</a>
+      <a href="#contact" class="btn btn-primary btn-sm">Talk to us</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap grid2">
+    <div>
+      <div class="eyebrow">Research &amp; impact intelligence · Nairobi, Kenya</div>
+      <h1>From collected data to decisions you can defend.</h1>
+      <p class="lead">We cut the time your MEL team spends cleaning programme data and assembling donor reports, with automated quality checks, expert statistical review and figures you can trace back to source.</p>
+      <div class="cta">
+        <a href="#contact" class="btn btn-primary">Book a reporting audit</a>
+        <a href="demo/" class="btn btn-ghost">Try the live demo</a>
+      </div>
+    </div>
+    <div class="path" aria-label="The evidence path">
+      <div class="eyebrow">The evidence path</div>
+      <div class="step">Survey responses</div>
+      <div class="step">Interview transcripts</div>
+      <div class="step">Programme records</div>
+      <div class="arrow">↓</div>
+      <div class="step mid">Clean · analyse · quality-check · expert review</div>
+      <div class="arrow">↓</div>
+      <div class="step out">Decision-ready, traceable evidence</div>
+    </div>
+  </div>
+</section>
+
+<section id="approach" class="alt">
+  <div class="wrap">
+    <div class="eyebrow">The work after collection</div>
+    <h2>Collection is the beginning. Evidence is the work that comes next.</h2>
+    <p class="muted" style="max-width:62ch">Keep KoboToolbox, SurveyCTO, ODK or whatever your teams already use. We work downstream of collection, so you don't have to replace anything.</p>
+    <div class="grid3">
+      <div class="tile"><div class="num">01</div><h3>Make the data trustworthy</h3><p class="muted">Validation rules catch duplicates, out-of-range values, missing indicators and inconsistent coding before they weaken the story.</p></div>
+      <div class="tile"><div class="num">02</div><h3>Find the signal with care</h3><p class="muted">AI-assisted analysis paired with statistical and impact-evaluation expertise. No AI-generated figure reaches a report without human review.</p></div>
+      <div class="tile"><div class="num">03</div><h3>Put findings to work</h3><p class="muted">Dashboards and donor-ready reports where every number links back to its source rows, rules and calculation.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="workflow">
+  <div class="wrap">
+    <div class="eyebrow">How an engagement works</div>
+    <h2>Keep the context. Make the evidence easier to use.</h2>
+    <div class="grid3">
+      <div class="tile"><div class="num">01</div><h3>Start with what you have</h3><p class="muted">Share existing surveys, transcripts and programme records, or give read access to your collection platform.</p></div>
+      <div class="tile"><div class="num">02</div><h3>Clean, analyse, check</h3><p class="muted">We standardise indicators across projects, run quality checks and review the analysis with your team.</p></div>
+      <div class="tile"><div class="num">03</div><h3>Make the next decision</h3><p class="muted">You get a reproducible reporting workflow your programme, research and funding teams can rely on every quarter.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="demo" class="alt">
+  <div class="wrap demo">
+    <div>
+      <div class="eyebrow">Live demo</div>
+      <h2>See what happens after collection.</h2>
+      <p class="muted">Explore a fictional three-project NGO dataset with the problems we see every reporting cycle. Run the checks, clean it in one click, and get a traceable summary. You can also profile your own CSV, which never leaves your browser.</p>
+      <a href="demo/" class="btn btn-primary">Open the live demo</a>
+      <p class="note">The demo runs R directly in your browser, so the first load takes 10–30 seconds.</p>
+    </div>
+    <div class="checks" aria-label="Example quality-check results">
+      <div><span>Duplicate record IDs</span><b>6</b></div>
+      <div><span>Age out of range</span><b>6</b></div>
+      <div><span>Missing household size</span><b>9</b></div>
+      <div><span>Missing water access</span><b>12</b></div>
+      <div><span>Non-standard district names</span><b>4</b></div>
+      <div><span>Visit dates in the future</span><b>2</b></div>
+      <div class="ok"><span>Records verified after cleaning</span><b>235</b></div>
+    </div>
+  </div>
+</section>
+
+<section id="offers">
+  <div class="wrap">
+    <div class="eyebrow">Ways to work with us</div>
+    <h2>Start small. Prove the value. Then scale.</h2>
+    <p class="muted">Fixed scopes with clear deliverables. Indicative prices in US dollars; final quotes depend on your data sources and volume.</p>
+    <div class="grid4">
+      <div class="tile"><h3>Reporting audit</h3><div class="price">$500–1,000</div><div class="unit">One-off · 1–2 weeks</div><p class="muted">A review of your data sources, reporting process and quality issues, with a written plan for what to automate. Part of the fee is credited to a pilot.</p></div>
+      <div class="tile featured"><span class="badge">Most teams start here</span><h3>Automation pilot</h3><div class="price">$2,500–5,000</div><div class="unit">One-off · 3–6 weeks</div><p class="muted">One reporting workflow automated end to end, with quality checks, a dashboard and documentation.</p></div>
+      <div class="tile"><h3>Managed analytics</h3><div class="price">$1,500–3,000</div><div class="unit">Per month · 6–12 months</div><p class="muted">We maintain the pipelines, produce scheduled reports, monitor data quality and support your MEL team.</p></div>
+      <div class="tile"><h3>Multi-project rollout</h3><div class="price">From $10,000</div><div class="unit">Project-based</div><p class="muted">Standardised indicators and reporting across several projects or countries, with access controls and staff training.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="teams" class="alt">
+  <div class="wrap">
+    <div class="eyebrow">Built around real research work</div>
+    <h2>For teams accountable for what the evidence says.</h2>
+    <div class="grid3">
+      <div class="tile"><h3>NGOs &amp; implementing partners</h3><p class="muted">Heads of MEL running several projects with quarterly donor reporting, baseline and endline studies.</p></div>
+      <div class="tile"><h3>Universities &amp; research institutions</h3><p class="muted">Research design, statistical analysis, reproducible workflows and publication support.</p></div>
+      <div class="tile"><h3>Foundations &amp; businesses</h3><p class="muted">Programme performance, portfolio-level indicators and evidence for investment decisions.</p></div>
+    </div>
+    <div class="trust">
+      <h3>How we handle your data</h3>
+      <ul>
+        <li>A written data-processing agreement before any data is shared.</li>
+        <li>De-identified or synthetic data wherever possible, and role-based access for the rest.</li>
+        <li>Documented retention and deletion at the end of each engagement.</li>
+        <li>Processing aligned with Kenya's Data Protection Act, 2019, including cross-border transfer requirements.</li>
+        <li>Every reported figure traceable to its source data and validation rules.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap grid2" style="align-items:start">
+    <div>
+      <div class="eyebrow">A useful conversation starts with your question</div>
+      <h2>What decision do you need your data to support?</h2>
+      <p class="muted">Tell us about the research, programme or reporting challenge. We'll reply within two working days to arrange a 20-minute call.</p>
+      <p class="muted">Prefer email? <a href="mailto:hello@tracewell.co.ke">hello@tracewell.co.ke</a></p>
+    </div>
+    <!-- Replace YOUR_FORM_ID with the ID Formspree gives you (see README) -->
+    <form class="form" id="enquiry" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="row2">
+        <div><label for="name">Your name</label><input id="name" name="name" required></div>
+        <div><label for="email">Work email</label><input id="email" name="email" type="email" required></div>
+      </div>
+      <div class="row2">
+        <div><label for="org">Organisation</label><input id="org" name="organisation"></div>
+        <div><label for="role">Your role</label>
+          <select id="role" name="role">
+            <option>Head of MEL / M&amp;E</option><option>Research director / PI</option>
+            <option>Programme director</option><option>Data / analytics lead</option><option>Other</option>
+          </select></div>
+      </div>
+      <label for="interest">Interested in</label>
+      <select id="interest" name="interest">
+        <option>Reporting audit</option><option>Automation pilot</option><option>Managed analytics</option>
+        <option>Multi-project rollout</option><option>Not sure yet</option>
+      </select>
+      <label for="msg">What's the reporting challenge?</label>
+      <textarea id="msg" name="message" rows="4" required></textarea>
+      <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <input type="hidden" name="_subject" value="New Tracewell enquiry">
+      <button class="btn btn-primary" type="submit">Send enquiry</button>
+      <div id="status" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; <span id="yr">2026</span> Tracewell · a service of JThree Analytics · Nairobi, Kenya</span>
+    <span><a href="mailto:hello@tracewell.co.ke" style="color:inherit">hello@tracewell.co.ke</a></span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+const form = document.getElementById('enquiry');
+const status = document.getElementById('status');
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  status.className = ''; status.textContent = '';
+  if (!form.checkValidity()) { form.reportValidity(); return; }
+  if (form.action.includes('YOUR_FORM_ID')) {
+    status.className = 'err';
+    status.textContent = 'The form is not connected yet. Please email hello@tracewell.co.ke.';
+    return;
+  }
+  const btn = form.querySelector('button'); btn.disabled = true; btn.textContent = 'Sending…';
+  try {
+    const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+    if (!res.ok) throw new Error();
+    form.reset();
+    status.className = 'ok';
+    status.textContent = "Thank you. Your enquiry has been received and we'll be in touch within two working days.";
+  } catch {
+    status.className = 'err';
+    status.textContent = 'Something went wrong. Please email hello@tracewell.co.ke instead.';
+  } finally {
+    btn.disabled = false; btn.textContent = 'Send enquiry';
+  }
+});
+</script>
+</body>
+</html>
